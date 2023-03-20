@@ -6,10 +6,7 @@
 
 #define INITIAL_CAPACITY 1
 
-//// define functions pointers
-//typedef PElement (*my_copy) (PElement original);
-//typedef void (*my_delete) (PElement original);
-//typedef void (*my_print) (PElement original);
+
 
 // overide the struct
 typedef struct AdptArray_{
@@ -36,16 +33,6 @@ PAdptArray CreateAdptArray(COPY_FUNC c, DEL_FUNC d,PRINT_FUNC p){
 }
 
 void DeleteAdptArray(PAdptArray list){
-//    for (size_t i = 0; i <= list->used_size; i++)
-//    {
-//        if(list->data[i])
-//        {
-//            list->delete(list->data[i]);
-//        }
-//    }
-//    free(list->copy);
-//    free(list->print);
-//    free(list->delete);
     free(list->data);
     free(list);
 }
